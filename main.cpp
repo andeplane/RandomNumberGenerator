@@ -15,6 +15,7 @@ int main(int numberOfArguments, char **arguments)
     cout << "Random double: " << Random::nextDouble() << endl;
     cout << "Random float: " << Random::nextFloat() << endl;
     cout << "Random long: " << Random::nextLong(0,10) << endl << endl;
+    cout << "Random bool: " << Random::nextBool() << endl << endl;
 
     Random::randomSeed();
     cout << "Choosing random seed based on clock." << endl;
@@ -22,5 +23,6 @@ int main(int numberOfArguments, char **arguments)
     cout << "Random double: " << Random::nextDouble() << endl;
     cout << "Random float: " << Random::nextFloat() << endl;
     cout << "Random long: " << Random::nextLong(0,10) << endl << endl;
+    cout << "Random bool: " << Random::nextBool() << endl << endl;
     return 0;
 }

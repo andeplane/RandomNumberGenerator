@@ -8,6 +8,7 @@
 // thread_local is not supported in clang so this is not thread safe. Please use GCC
 static std::mt19937 generator;
 #else
+// this generator is now thread safe so we can use it with OpenMP.
 static thread_local std::mt19937 generator;
 #endif
 
@@ -49,6 +50,11 @@ public:
     static long nextLong(const long & min, const long & max) {
         // Random long between min and max
         std::uniform_int_distribution<long> distribution(min,max);
+        return distribution(generator);
+    }
+    static bool nextBool() {
+        // Random bool
+        std::uniform_int_distribution<int> distribution(0,1);
         return distribution(generator);
     }
 

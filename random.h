@@ -42,6 +42,11 @@ public:
         std::uniform_real_distribution<double> distribution(0,1);
         return distribution(generator);
     }
+    static double nextGaussian(const double & mean, const double & sigma) {
+        // Normally distributed random number.
+        std::normal_distribution<double> distribution(mean, sigma);
+        return distribution(generator);
+    }
     static int nextInt(const int & min, const int & max) {
         // Random int between min and max
         std::uniform_int_distribution<int> distribution(min,max);

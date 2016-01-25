@@ -14,15 +14,17 @@ int main(int numberOfArguments, char **arguments)
     cout << "Random int: " << Random::nextInt(0,10) << endl;
     cout << "Random double: " << Random::nextDouble() << endl;
     cout << "Random float: " << Random::nextFloat() << endl;
-    cout << "Random long: " << Random::nextLong(0,10) << endl << endl;
-    cout << "Random bool: " << Random::nextBool() << endl << endl;
+    cout << "Random long: " << Random::nextLong(0,10) << endl;
+    cout << "Random bool: " << Random::nextBool() << endl;
+    cout << "Random gaussian: " << Random::nextGaussian(0,1) << endl << endl;
 
     Random::randomSeed();
     cout << "Choosing random seed based on clock." << endl;
     cout << "Random int: " << Random::nextInt(0,10) << endl;
     cout << "Random double: " << Random::nextDouble() << endl;
     cout << "Random float: " << Random::nextFloat() << endl;
-    cout << "Random long: " << Random::nextLong(0,10) << endl << endl;
-    cout << "Random bool: " << Random::nextBool() << endl << endl;
+    cout << "Random long: " << Random::nextLong(0,10) << endl;
+    cout << "Random bool: " << Random::nextBool() << endl;
+    cout << "Random gaussian: " << Random::nextGaussian(0,1) << endl << endl;
     return 0;
 }
